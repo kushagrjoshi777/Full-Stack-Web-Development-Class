@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Banking Application</title>
+
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            background-color: bisque;
+            color:#422800;
+            margin:20px;
+        }
+
+        h1{
+            color:#422800;
+            text-align:center;
+            font-size:40px;
+        }
+
+        h2{
+            color:#117A65;
+            font-size:26px;
+            background-color:aqua;
+            padding:10px 15px;
+            border-left:6px solid #117A65;
+            border-radius:8px;
+        }
+
+        p{
+            font-size:16px;
+        }
+
+        b{
+            color:#422800;
+            font-size:18px;
+        }
+
+        strong{
+            color:red;
+            font-size:42px;
+        }
+
+        a{
+            color:#D35400;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        a:hover{
+            color:red;
+            text-decoration:underline;
+        }
+
+        hr{
+            margin:30px 0;
+        }
+
+        body>p,
+        body>ul,
+        body>ol,
+        body>table,
+        body>form,
+        body>audio,
+        body>video,
+        body>img,
+        .transaction-table{
+            background:white;
+            padding:15px;
+            border:2px solid #117A65;
+            border-radius:10px;
+            box-shadow:4px 4px 12px rgba(0,0,0,.2);
+            margin-bottom:15px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+            background:white;
+            box-shadow:5px 5px 15px rgba(0,0,0,.2);
+        }
+
+        th,td{
+            border:2px solid #117A65;
+            padding:12px;
+            text-align:left;
+        }
+
+        th{
+            background:#117A65;
+            color:white;
+        }
+
+        img{
+            width:200px;
+            height:100px;
+            padding:15px;
+            border:4px solid darkblue;
+            border-radius:12px;
+            background:white;
+        }
+
+        form{
+            background:white;
+            padding:20px;
+            border:3px solid #117A65;
+            border-radius:12px;
+            width:320px;
+            box-shadow:5px 5px 15px rgba(0,0,0,.3);
+        }
+
+        button{
+            background:#117A65;
+            color:white;
+            padding:10px 20px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#0d5e4d;
+        }
+
+        .notification{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            background:#117A65;
+            color:white;
+            padding:15px 20px;
+            border:3px solid white;
+            border-radius:12px;
+            box-shadow:0 0 15px rgba(0,0,0,.4);
+            animation:flash 1s infinite alternate;
+            font-weight:bold;
+        }
+
+        @keyframes flash{
+            from{transform:scale(1);opacity:.7;}
+            to{transform:scale(1.08);opacity:1;}
+        }
+    </style>
+</head>
+
+<body>
+
+<h1><strong>Online Banking</strong></h1>
+
+<h2>Welcome to Online Banking</h2>
+
+<p>Welcome to ABC Online Banking Application.</p>
+
+<p>Access your bank account anytime and anywhere.</p>
+
+<hr>
+
+<h2>Text Formatting</h2>
+
+<p><b>ABC Bank</b> provides secure online banking services.</p>
+
+<p><b>Important:</b> Never share your password with anyone.</p>
+
+<p><i>Banking made simple.</i></p>
+
+<p><em>Your security is important to us.</em></p>
+
+<p><mark>Security Alert:</mark> Never share your OTP.</p>
+
+<p>
+Banking Made Easy<br>
+Banking Made Secure<br>
+Banking Made Digital
+</p>
+
+<hr>
+
+<h2>Working with Colors</h2>
+
+<h3 style="color:blue;">Welcome to ABC Bank</h3>
+
+<p style="color:green;">Your transaction was successful.</p>
+
+<p style="color:red;">Warning: Never share your password or OTP.</p>
+
+<p style="background-color:yellow;">Important Banking Notification</p>
+
+<hr>
+
+<h2>Banking Services</h2>
+
+<h3>Unordered List</h3>
+
+<ul>
+<li>Account Balance</li>
+<li>Fund Transfer</li>
+<li>Transaction History</li>
+<li>Bill Payment</li>
+<li>Profile Management</li>
+</ul>
+
+<h3>Ordered List - Steps to Login</h3>
+
+<ol>
+<li>Open the Online Banking Website</li>
+<li>Enter your Username</li>
+<li>Enter your Password</li>
+<li>Click the Login Button</li>
+<li>Access your Account Dashboard</li>
+</ol>
+
+<hr>
+
+<h2>Working with Links</h2>
+
+<h3>Internal Links</h3>
+
+<a href="login.html">Go to Login</a>
+
+<br><br>
+
+<a href="#transactions">View Transactions</a>
+
+<h3>External Link</h3>
+
+<a href="https://www.youtube.com">Visit External Website</a>
+
+<hr>
+
+<h2>Working with Images</h2>
+
+<p>Bank Logo:</p>
+
+<img src="abc_bank.jpg" alt="ABC Bank Logo" style="float:right;margin:15px;">
+
+<img src="abc_bank.jpg" alt="ABC Bank Logo" style="float:left;margin:15px;">
+
+<div style="clear:both;"></div>
+
+<hr>
+
+<h2 id="transactions">Transaction History</h2>
+
+<div class="transaction-table">
+<p>View your recent transactions below:</p>
+</div>
+
+<table>
+<tr>
+<th>Date</th>
+<th>Description</th>
+<th>Transaction Type</th>
+<th>Amount</th>
+</tr>
+
+<tr>
+<td>20-07-2026</td>
+<td>Salary Credit</td>
+<td>Credit</td>
+<td>₹50,000</td>
+</tr>
+
+<tr>
+<td>21-07-2026</td>
+<td>Electricity Bill</td>
+<td>Debit</td>
+<td>₹2,500</td>
+</tr>
+
+<tr>
+<td>22-07-2026</td>
+<td>Online Shopping</td>
+<td>Debit</td>
+<td>₹3,000</td>
+</tr>
+</table>
+
+<br>
+
+<hr>
+
+<h2 id="login">Customer Login</h2>
+
+<form>
+<label for="username">Username:</label>
+<input type="text" id="username" name="username">
+
+<br><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password">
+
+<br><br>
+
+<button type="submit">Login</button>
+</form>
+
+<hr>
+
+<h2>Working with Audio</h2>
+
+<h3>Online Banking Security Instructions</h3>
+
+<audio controls>
+<source src="security-message.mp3" type="audio/mpeg">
+Your browser does not support audio.
+</audio>
+
+<hr>
+
+<h2>Working with Video</h2>
+
+<h3>Online Banking Tutorial</h3>
+
+<video width="500" controls>
+<source src="TrialVide.mp4" type="video/mp4">
+Your browser does not support video.
+</video>
+
+<hr>
+
+<h2>Thank You</h2>
+
+<p>ABC Online Banking Application</p>
+
+<div class="notification">
+🔔 <span>Secure Banking Available 24×7</span>
+</div>
+
+</body>
+</html>

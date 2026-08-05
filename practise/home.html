@@ -1,13 +1,78 @@
-!DOCTYPE html>     <!-- Informing to browser about the type of document -->
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>Online Banking Application</title>
+
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif ;
+            background-color: bisque;
+            color: #422800;
+            margin: 20px;
+        }
+
+        h1 {
+            
+            color: #422800;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        h2 {
+            color: #117A65;
+            font-size: 26px;
+            background-color: aqua;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        b{
+            color:#422800;
+            font-size: 18px;
+        }
+        strong{
+            color: red;
+            font-size: 42px;
+        }
+        a {
+            color: #D35400;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #117A65;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        img{
+            width: 200px;
+            height: 100px;
+            padding: 30px;
+            border: 3px solid darkblue;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>ABC Online Banking</h1>
+    <h1><strong>Online Banking</strong></h1>
 
     <h2>Welcome to Online Banking</h2>
 
@@ -20,13 +85,7 @@
     </p>
 
 
-    <hr>   <!-- It will draw a horizontal line (horizontal rule) -->
-
-
-    <!-- ========================================== -->
-    <!-- SEGMENT 2: TEXT FORMATTING                  -->
-    <!-- Tags: b, strong, i, em, mark, br            -->
-    <!-- ========================================== -->
+    <hr>
 
     <h2>Text Formatting</h2>
 
@@ -35,7 +94,7 @@
     </p>
 
     <p>
-        <strong>Important:</strong>
+        <b>Important:</b>
         Never share your password with anyone.
     </p>
 
@@ -115,18 +174,11 @@
 
     <hr>
 
-
-    <!-- ========================================== -->
-    <!-- SEGMENT 5: LINKS                            -->
-    <!-- Tag: a                                      -->
-    <!-- Internal and External Links                 -->
-    <!-- ========================================== -->
-
     <h2>Working with Links</h2>
 
     <h3>Internal Links</h3>
 
-    <a href="#login">Go to Login</a>
+    <a href="login.html">Go to Login</a>
 
     <br><br>
 
@@ -135,7 +187,7 @@
 
     <h3>External Link</h3>
 
-    <a href="https://www.google.com">
+    <a href="https://www.youtube.com">
         Visit External Website
     </a>
 
@@ -148,7 +200,7 @@
 
     <p>Bank Logo:</p>
 
-    <img src="bank-logo.png"
+    <img src="abc_bank.jpg"
          alt="ABC Bank Logo"
          width="200"
          height="100">
@@ -194,7 +246,7 @@
         </tr>
 
     </table>
-
+    <br>
 
     <hr>
 
@@ -239,11 +291,6 @@
     <hr>
 
 
-    <!-- ========================================== -->
-    <!-- SEGMENT 9: AUDIO                            -->
-    <!-- Tags: audio, source                         -->
-    <!-- ========================================== -->
-
     <h2>Working with Audio</h2>
 
     <h3>Online Banking Security Instructions</h3>
@@ -270,7 +317,7 @@
     <video width="500"
            controls>
 
-        <source src="banking-tutorial.mp4"
+        <source src="TrialVide.mp4"
                 type="video/mp4">
 
         Your browser does not support video.

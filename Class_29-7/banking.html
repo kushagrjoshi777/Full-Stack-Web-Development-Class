@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Title appears in the browser tab -->
+    <title>ABC Online Banking</title>
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* ========================================== */
+        /* CSS SEGMENT 1: STYLING THE BODY            */
+        /* body represents the visible webpage area   */
+        /* ========================================== */
+
+        body {
+            font-family: Timesnewroman, sans-serif;
+            background-color: 	grey;
+            color: black;
+		
+        }
+
+h1 {
+            color: darkblue;
+            text-align: center;
+            font-size: 36px;
+        }
+
+h2 {
+            color: blue;
+            font-size: 26px;
+            background-color: lightblue;
+            padding: 25px;
+        }
+
+   p {
+            font-size: 18px;
+            line-height: 2.5;
+            color: #333333;
+        }
+
+ b {
+            color: darkblue;
+        }
+
+        strong {
+            color: red;
+        }
+
+        i {
+            color: green;
+        }
+
+        em {
+            color: darkgreen;
+        }
+
+        mark {
+            background-color: yellow;
+            color: red;
+        }
+
+ul {
+    list-style-type: circle;     /* disc, none, square, circle */
+}
+
+ol {
+    list-style-type: decimal;  /* decimal, decimal-leading-zero, lower-alpha, upper-alpha, lower-roman,upper-roman */
+}
+
+li {
+    font-size: 22px;
+    margin: 12px;
+}
+
+
+/* ========================================== */
+        /* CSS SEGMENT 7: STYLING LINKS               */
+        /* ========================================== */
+
+        a {
+            color: blue;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+
+        /* Changes link appearance when mouse is over it */
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+
+img {
+    width: 200px;
+    height: 100px;
+    border: 3px solid darkblue;
+    padding: 30px;
+    margin: 200px;
+}
+
+img {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px; 
+}
+
+.image-center {
+    text-align: center;
+}
+
+
+
+/* ========================================== */
+/* CSS SEGMENT 9: STYLING TABLES             */
+/* ========================================== */
+
+
+        table {
+            width: 50%;
+
+            /* Try changing separate to separate */
+            border-collapse: collapse;    
+
+            /* Works only with separate */
+            border-spacing: 10 px;
+
+            /* Makes the gap visible */
+            background-color: gray;
+        }
+
+        th {
+            background-color: darkblue;
+            color: white;
+            border: 3px solid red;
+            padding: 10px;
+        }
+
+        td {
+            background-color: white;
+            border: 3px solid black;
+            padding: 10px;
+        }
+
+.date-column {
+    width: 55%;
+}
+ 
+/* ========================================== */
+/* CSS SEGMENT 10: STYLING THE LOGIN FORM    */
+/* ========================================== */
+
+.login-form {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto; 
+/*Here, 20px gives top and bottom margin, while auto automatically distributes the available left and right margin, which centers the .login-form horizontally.*/
+    border: 2px solid darkblue;
+}
+
+/* Style the input fields */
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* Style the Login button */
+
+button {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 40px;   /* width between the text and the border , top down followed by left right */
+    border: dotted;
+}
+
+/* ========================================== */
+/* CSS SEGMENT 11: TRANSITIONS AND TRANSFORMS */
+/* ========================================== */
+
+button {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+
+    /* Creates smooth transition */
+    transition: 2s;
+}
+
+
+/* When mouse pointer is placed over the button */
+
+button:hover {
+
+    /* Changes background color */
+    background-color: green;
+
+    /* Slightly increases the button size */
+    transform: scale(1.1);
+
+    /* Changes mouse pointer */
+    cursor: pointer;
+}
+
+
+/* ========================================== */
+/* CSS SEGMENT 13: POSITIONING                */
+/* ========================================== */
+
+.security-alert {
+    position: fixed;   /*static, relative,absolute, stickey*/
+    bottom: 20px;
+    right: 20px;
+
+    background-color: yellow;
+    color: red;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+/* ========================================== */
+/* CSS SEGMENT 13B: RELATIVE AND ABSOLUTE    */
+/* ========================================== */
+
+/* Parent Container */
+
+.banking-box {
+    position: relative;
+    width: 400px;
+    height: 150px;
+    background-color: white;
+    border: 2px solid darkblue;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+/* Child Element */
+
+.secure-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background-color: green;
+    color: white;
+    padding: 5px;
+}
+
+/* ========================================== */
+/* CSS SEGMENT 14: FLOATING                   */
+/* ========================================== */
+
+/* Float Section */
+
+.float-container {
+    display: flow-root;
+}
+
+.float-image {
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Flexbox Section */
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.service-box {
+    flex: 1;
+    background-color: white;
+    border: 2px solid darkblue;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ========================================== */
+/* CSS SEGMENT 18: CSS ANIMATION              */
+/* ========================================== */
+
+.security-alert {
+    animation: blink 2s infinite;
+}
+
+
+/* Define the animation */
+
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ========================================== */
+/* CSS SEGMENT 19: STYLING THE CANVAS         */
+/* ========================================== */
+
+canvas {
+    background-color: white;
+    border: 2px solid darkblue;
+    margin: 20px;
+}
+
+    </style>
+
+</head>
+
+
+
+
+<body>
+
+    <!-- ========================================== -->
+    <!-- HTML SEGMENT 1: MAIN HEADING                -->
+    <!-- ========================================== -->
+
+    <h1>ABC Online Banking</h1>
+
+
+    <!-- ========================================== -->
+    <!-- HTML SEGMENT 2: SECTION HEADING             -->
+    <!-- ========================================== -->
+
+    <h2>Welcome to Online Banking</h2>
+
+
+    <!-- ========================================== -->
+    <!-- HTML SEGMENT 3: PARAGRAPHS                  -->
+    <!-- ========================================== -->
+
+    <p>
+        Welcome to ABC Online Banking Application.
+    </p>
+
+    <p>
+        Access your bank account anytime and anywhere.
+    </p>
+
+
+    <!-- ========================================== -->
+    <!-- HTML SEGMENT 4: TEXT FORMATTING             -->
+    <!-- ========================================== -->
+
+    <h2>Text Formatting</h2>
+
+
+    <!-- Bold Text -->
+
+    <p>
+        <b>ABC Bank</b> provides secure online banking services.
+    </p>
+
+
+    <!-- Strong / Important Text -->
+
+    <p>
+        <strong>Important:</strong>
+        Never share your password with anyone.
+    </p>
+
+
+    <!-- Italic Text -->
+
+    <p>
+        <i>Banking made simple.</i>
+    </p>
+
+
+    <!-- Emphasized Text -->
+
+    <p>
+        <em>Your security is important to us.</em>
+    </p>
+
+
+    <!-- Highlighted Text -->
+
+    <p>
+        <mark>Security Alert:</mark>
+        Never share your OTP.
+    </p>
+
+
+    <!-- Line Break Example -->
+
+    <p>
+        Banking Made Easy
+        <br>
+        Banking Made Secure
+        <br>
+        Banking Made Digital
+    </p>
+
+
+    <hr>
+
+<h2>Banking Services</h2>
+
+
+    <!-- Unordered List -->
+
+    <h3>Available Banking Services</h3>
+
+    <ul>
+        <li>Account Balance</li>
+        <li>Fund Transfer</li>
+        <li>Transaction History</li>
+        <li>Bill Payment</li>
+        <li>Profile Management</li>
+    </ul>
+
+
+    <!-- Ordered List -->
+
+    <h3>Steps to Login</h3>
+
+    <ol>
+        <li>Open the Online Banking Website</li>
+        <li>Enter your Username</li>
+        <li>Enter your Password</li>
+        <li>Click the Login Button</li>
+        <li>Access your Account Dashboard</li>
+    </ol>
+
+    <hr>
+ <h2>Working with Links</h2>
+
+
+    <!-- Internal Link -->
+    <!-- Takes the user to another location
+         within the same webpage -->
+
+    <a href="#home">
+        Go to Home
+    </a>
+
+
+    <!-- External Link -->
+    <!-- Takes the user to another website -->
+
+  <a href="https://onlinesbi.sbi.bank.in/"
+   target="_blank">
+    Visit SBI Online Banking
+</a>
+
+    <hr>
+
+ <h2>Working with Images</h2>
+
+    <p>Bank Logo:</p>
+
+    <img src="E:\SRM University\Full stack\sbi-logo-sbi-icon-transparent-free-png.webp"
+         alt="SBI Bank Logo">
+
+    <hr>
+
+<div class="image-center">  
+
+<!-- command //div is a container and class for various image to call.  -->
+ 
+
+    <img src="E:\SRM University\Full stack\sbi-logo-sbi-icon-transparent-free-png.webp"
+         alt="SBI Bank Logo">
+</div>
+
+
+<!-- ========================================== -->
+<!-- HTML SEGMENT 9: TABLES                     -->
+<!-- ========================================== -->
+
+<h2>Transaction History</h2>
+
+<table>
+
+    <!-- Table Header Row -->
+
+   <tr>
+    <th class="date-column">Date</th>
+    <th>Description</th>
+    <th>Transaction Type</th>
+    <th>Amount</th>
+</tr>
+
+
+    <!-- Transaction 1 -->
+
+    <tr>
+        <td>20-07-2026</td>
+        <td>Cash Deposit</td>
+        <td>Credit</td>
+        <td>₹10,000</td>
+    </tr>
+
+
+    <!-- Transaction 2 -->
+
+    <tr>
+        <td>21-07-2026</td>
+        <td>ATM Withdrawal</td>
+        <td>Debit</td>
+        <td>₹2,000</td>
+    </tr>
+
+
+    <!-- Transaction 3 -->
+
+    <tr>
+        <td>22-07-2026</td>
+        <td>Fund Transfer</td>
+        <td>Debit</td>
+        <td>₹5,000</td>
+    </tr>
+
+</table>
+
+<hr>
+
+
+<div class="login-form">
+
+    <form>
+
+        <!-- Username Field -->
+
+        <label for="username">
+            Username:
+        </label>
+
+        <br>
+
+        <input type="text"
+               id="username"
+               name="username">
+
+        <br>
+     <br>
+
+        <!-- Password Field -->
+
+        <label for="password">
+            Password:
+        </label>
+
+        <br>
+
+        <input type="password"
+               id="password"
+               name="password">
+
+        <br>
+<br>
+
+
+        <!-- Login Button -->
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+</div>
+
+<hr>
+
+
+<!-- ========================================== -->
+<!-- HTML SEGMENT 13: POSITIONING               -->
+<!-- ========================================== -->
+
+<div class="security-alert">
+    Never share your OTP or Password!
+</div>
+
+
+<!-- ========================================== -->
+<!-- HTML SEGMENT 13B: RELATIVE AND ABSOLUTE   -->
+<!-- ========================================== -->
+
+<h2>Relative and Absolute Positioning</h2>
+
+<div class="banking-box">
+
+    <h3>Online Banking</h3>
+
+    <p>
+        Access your account securely.
+    </p>
+
+    <div class="secure-label">
+        Secure Banking
+    </div>
+
+</div>
+
+
+<!-- ========================================== -->
+<!-- HTML SEGMENT 14: FLOATING                  -->
+<!-- ========================================== -->
+
+<h2>About ABC Online Banking</h2>
+
+<div class="float-container">
+
+    <img class="float-image"
+         src="E:\SRM University\Full stack\sbi-logo-sbi-icon-transparent-free-png.webp"
+         alt="SBI Bank Logo">
+
+    <p>
+        ABC Online Banking provides customers with convenient
+        access to banking services. Customers can check their
+        account balance, view transaction history, and transfer funds.
+        Online banking allows customers to access banking services
+        anytime and anywhere.
+    </p>
+
+</div>
+
+
+
+<!-- flex  instead of having one by one it will allign as horizontally -->
+
+<!-- ========================================== -->
+<!-- HTML SEGMENT 15: FLEXBOX LAYOUT            -->
+<!-- ========================================== -->
+
+
+<!-- FLEXBOX SECTION -->
+
+<h2>Online Banking Services</h2>
+
+<div class="service-container">
+
+    <div class="service-box">
+        <h3>Account Balance</h3>
+        <p>Available Balance: ₹50,000</p>
+    </div>
+
+    <div class="service-box">
+        <h3>Fund Transfer</h3>
+        <p>Transfer money to another account.</p>
+    </div>
+
+    <div class="service-box">
+        <h3>Transaction History</h3>
+        <p>View your recent transactions.</p>
+    </div>
+
+</div>
+
+<!-- ========================================== -->
+<!-- HTML SEGMENT 19: CANVAS     (java is required to write / draw inside the canvas)              -->
+<!-- ========================================== -->
+
+<h2>Online Banking Canvas</h2>
+
+<canvas id="bankCanvas"
+        width="500"
+        height="200">
+</canvas>
+
+
+</body>
+
+</html>

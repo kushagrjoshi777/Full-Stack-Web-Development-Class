@@ -41,7 +41,7 @@
             width:100%;
             border-collapse:collapse;
             background:white;
-        }
+        } 
 
         th,td{
             border:1px solid black;
@@ -76,6 +76,27 @@
             padding:8px 15px;
             border:none;
         }
+        .notification{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            background:#117A65;
+            color:white;
+            padding:7px 15px;
+            border:3px solid white;
+            border-radius:12px;
+            box-shadow:0 0 15px rgba(0,0,0,.4);
+            animation:flash 1s infinite alternate;
+            font-weight:bold;
+        }
+
+        @keyframes flash{
+            from{transform:scale(1);opacity:.7;}
+            to{transform:scale(1.08);opacity:1;}
+        }
     </style>
 
 </head>
@@ -107,7 +128,7 @@
 
 <p>
 Computer Science student passionate about Full Stack Development,
-Artificial Intelligence and Computer Vision. Looking to build useful
+Artificial Intelligence and <em>Computer Vision.</em> Looking to build useful
 software while continuously learning new technologies.
 </p>
 
@@ -218,6 +239,10 @@ software while continuously learning new technologies.
 </video>
 
 <hr>
+
+<div class="notification">
+🔔 <p>Hello!</p>
+</div>
 
 <p align="center"><b>Thank You!</b></p>
 

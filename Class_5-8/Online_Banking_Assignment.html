@@ -297,7 +297,35 @@ Banking Made Digital
 
 <br><br>
 
-<button type="submit">Login</button>
+<button type="button" onclick="checkLoginDetails()">Login</button>
+<script>
+    function checkLoginDetails() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        console.log("Username: ", username);
+        console.log("Password: ", password);
+
+        let message = document.getElementById("LoginMessage");
+
+        if (username === "user123" && password === "pass123") {
+            console.log("Login Successful!");
+            message.innerHTML = "Login Successful!";
+            message.style.color = "green";
+            message.style.fontSize = "23px";
+
+            alert("Login Successful!");
+        } 
+        else {
+            console.log("Invalid Username or Password.");
+            message.innerHTML = "Invalid Username or Password.";
+            message.style.color = "red";
+            message.style.fontSize = "23px";
+            alert("Invalid Username or Password.");
+    }
+    }
+</script>
+
 </form>
 
 <hr>
@@ -337,12 +365,31 @@ Your browser does not support video.
     function showBalance() {
         alert("Your current balance is: $5000.00");
     }
+    mouseButton.addEventListener("mouseover", function() {
+        alert("Your current balance is: $5000.00");
+    });
+
+    mousebutton.style.backgroundColor = "blue";
+    console.log("Mouseover event triggered. Balance alert displayed.");
 </script>
 
 <button type="button" onclick="showBalance()">Check Balance</button>
 
 </button>
 
+<br><br>
+
+
+<h1 id="Online Banking">Welcome to ABC BANK</h1>
+
+
+
+<script>
+    let title = document.getElementById("Welcome to ABC Online Banking Application.");
+    title.innerHTML = "Welcome to Kushagr's Bank";
+    title.style.textAlign = "center";
+    title.style.color = "blue";
+</script>
 
 
 </body>

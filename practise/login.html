@@ -1,45 +1,125 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Login Page</title>
-        <style>
-            body{
-                background-color: bisque;
-            }
-            h1{
-                font-family: 'Times New Roman', Times, serif;
-                font-size: 36px;
-                text-align: center;
-                background-color: cyan;
-            }
-            h2{
-                font-family: 'Times New Roman', Times, serif;
-                font-size: 24px;
-                text-align: left;
-            }
-            b{
-                font-size: 20px;
-                color: red;
-            }
-            a{
-                color: blue;
-                text-decoration: none;
-            }
-            a:hover{
-                color: green;
-                text-decoration: underline;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>LOGIN PAGE</h1>
-        <h2>Enter Your login information carefully: </h1>
-        <hr>
-        <h3>The password is case sensitive</h2>
-        <p><b>Note</b>: Do not share your login credentials with anyone.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Bank - Login</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: bisque;
+            color: #422800;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #422800;
+            font-size: 36px;
+            background-color: aqua;
+            padding: 15px;
+        }
+
+        h2 {
+            color: #117A65;
+        }
+
+        .login-box {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 25px;
+            border: 2px solid #117A65;
+            background-color: #fff8ed;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 18px;
+        }
+
+        button {
+            background-color: #117A65;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0b5345;
+        }
+
+        #message {
+            color: red;
+            font-weight: bold;
+        }
+
+        .note {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ABC BANK - LOGIN PAGE</h1>
+
+    <div class="login-box">
+        <h2>Customer Login</h2>
+
+        <p>Enter your login information carefully.</p>
+
+        <p class="note">
+            Note: Passwords are case-sensitive. Never share your credentials.
+        </p>
 
         <hr>
 
-        <a href="home.html">Home Page</a>
-    </body>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"
+                   placeholder="Enter username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter password" required>
+
+            <button type="submit">Login</button>
+            <p id="message"></p>
+        </form>
+    </div>
+
+    <script>
+        // Demo credentials for this HTML practical
+        const validUsername = "admin";
+        const validPassword = "1234";
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const message = document.getElementById("message");
+
+            if (username === validUsername && password === validPassword) {
+                sessionStorage.setItem("loggedIn", "true");
+                sessionStorage.setItem("bankUsername", username);
+
+                window.location.href = "home.html";
+            } else {
+                message.textContent = "Invalid username or password. Please try again.";
+            }
+        });
+    </script>
+
+</body>
 </html>

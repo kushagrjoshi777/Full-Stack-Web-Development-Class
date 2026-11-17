@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-canvas text-ink-900 font-body antialiased;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  h1, h2, h3, h4 { @apply font-sans text-ink-900; letter-spacing: -0.01em; }
+  :focus-visible { outline: 2px solid #2f7d48; outline-offset: 2px; border-radius: 6px; }
+  ::selection { background: #d6eadb; }
+}
+
+@layer components {
+  .container-bb { @apply mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8; }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium font-sans
+           transition-all duration-150 select-none disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap;
+  }
+  .btn-primary { @apply bg-forest-600 text-white hover:bg-forest-700 hover:shadow-lift active:scale-[.98]; }
+  .btn-tonal { @apply bg-forest-50 text-forest-700 hover:bg-forest-100 active:scale-[.98]; }
+  .btn-outline { @apply border border-line bg-white text-ink-700 hover:bg-sand-50 hover:border-sand-200 active:scale-[.98]; }
+  .btn-danger { @apply bg-white border border-red-200 text-red-700 hover:bg-red-50 active:scale-[.98]; }
+  .btn-danger-solid { @apply bg-red-600 text-white hover:bg-red-700; }
+  .btn-ghost { @apply text-ink-700 hover:bg-sand-100; }
+  .btn-sm { @apply px-3.5 py-1.5 text-[13px]; }
+
+  .field {
+    @apply w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-[15px] text-ink-900
+           placeholder:text-ink-400 transition-colors hover:border-ink-400/50
+           focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-200;
+  }
+  .label { @apply mb-1.5 block text-[13px] font-medium text-ink-700 font-sans; }
+  .hint { @apply mt-1 text-xs text-ink-500; }
+
+  .surface { @apply rounded-2xl border border-line bg-white shadow-card; }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white px-3.5 py-1.5 text-[13px]
+           font-medium text-ink-700 transition-colors hover:bg-sand-50 cursor-pointer font-sans;
+  }
+  .chip-active { @apply border-forest-600 bg-forest-50 text-forest-700; }
+  .tab {
+    @apply relative px-1 py-3 text-sm font-medium text-ink-500 hover:text-ink-900 transition-colors font-sans whitespace-nowrap;
+  }
+  .tab-active { @apply text-forest-700; }
+  .tab-active::after {
+    content: ''; @apply absolute inset-x-0 -bottom-px h-[3px] rounded-t-full bg-forest-600;
+  }
+  .kicker { @apply font-sans text-xs font-semibold uppercase tracking-[0.12em] text-forest-600; }
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise .35s ease-out both; }
+@keyframes toast-in { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+.toast-in { animation: toast-in .22s ease-out both; }
+@keyframes shimmer { 0% { background-position: -300px 0; } 100% { background-position: 300px 0; } }
+.skeleton {
+  background: linear-gradient(90deg, #efeadd 0%, #f6f3ec 50%, #efeadd 100%);
+  background-size: 600px 100%; animation: shimmer 1.4s infinite linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise, .toast-in, .skeleton { animation: none; }
+}

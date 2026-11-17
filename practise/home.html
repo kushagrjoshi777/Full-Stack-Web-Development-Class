@@ -1,19 +1,28 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Banking Application</title>
+
+    <script>
+        // Check whether the user has logged in
+        if (sessionStorage.getItem("loggedIn") !== "true") {
+            window.location.replace("login.html");
+        }
+    </script>
 
     <style>
         body {
-            font-family:'Times New Roman', Times, serif ;
+            font-family: 'Times New Roman', Times, serif;
             background-color: bisque;
             color: #422800;
             margin: 20px;
         }
 
         h1 {
-            
             color: #422800;
             text-align: center;
             font-size: 40px;
@@ -29,14 +38,16 @@
             font-size: 16px;
         }
 
-        b{
-            color:#422800;
+        b {
+            color: #422800;
             font-size: 18px;
         }
-        strong{
+
+        strong {
             color: red;
             font-size: 42px;
         }
+
         a {
             color: #D35400;
             text-decoration: none;
@@ -61,11 +72,32 @@
         th {
             background-color: #f2f2f2;
         }
-        img{
+
+        img {
             width: 200px;
             height: 100px;
             padding: 30px;
             border: 3px solid darkblue;
+        }
+
+        button {
+            background-color: #117A65;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0b5345;
+        }
+
+        .welcome {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff8ed;
+            border: 1px solid #117A65;
         }
     </style>
 </head>
@@ -74,79 +106,44 @@
 
     <h1><strong>Online Banking</strong></h1>
 
+    <div class="welcome">
+        <h2>Welcome to ABC Online Banking</h2>
+        <p>Welcome, <b id="customerName"></b>!</p>
+        <p>You have successfully logged in.</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
     <h2>Welcome to Online Banking</h2>
 
-    <p>
-        Welcome to ABC Online Banking Application.
-    </p>
-
-    <p>
-        Access your bank account anytime and anywhere.
-    </p>
-
+    <p>Welcome to ABC Online Banking Application.</p>
+    <p>Access your bank account anytime and anywhere.</p>
 
     <hr>
 
     <h2>Text Formatting</h2>
 
-    <p>
-        <b>ABC Bank</b> provides secure online banking services.
-    </p>
+    <p><b>ABC Bank</b> provides secure online banking services.</p>
+    <p><b>Important:</b> Never share your password with anyone.</p>
+    <p><i>Banking made simple.</i></p>
+    <p><em>Your security is important to us.</em></p>
+    <p><mark>Security Alert:</mark> Never share your OTP.</p>
 
     <p>
-        <b>Important:</b>
-        Never share your password with anyone.
-    </p>
-
-    <p>
-        <i>Banking made simple.</i>
-    </p>
-
-    <p>
-        <em>Your security is important to us.</em>
-    </p>
-
-    <p>
-        <mark>Security Alert:</mark>
-        Never share your OTP.
-    </p>
-
-    <p>
-        Banking Made Easy
-        <br>
-        Banking Made Secure
-        <br>
+        Banking Made Easy<br>
+        Banking Made Secure<br>
         Banking Made Digital
     </p>
 
-
     <hr>
-
-
-   
 
     <h2>Working with Colors</h2>
 
-    <h3 style="color: blue;">
-        Welcome to ABC Bank
-    </h3>
-
-    <p style="color: green;">
-        Your transaction was successful.
-    </p>
-
-    <p style="color: red;">
-        Warning: Never share your password or OTP.
-    </p>
-
-    <p style="background-color: yellow;">
-        Important Banking Notification
-    </p>
-
+    <h3 style="color: blue;">Welcome to ABC Bank</h3>
+    <p style="color: green;">Your transaction was successful.</p>
+    <p style="color: red;">Warning: Never share your password or OTP.</p>
+    <p style="background-color: yellow;">Important Banking Notification</p>
 
     <hr>
-
-
 
     <h2>Banking Services</h2>
 
@@ -160,7 +157,6 @@
         <li>Profile Management</li>
     </ul>
 
-
     <h3>Ordered List - Steps to Login</h3>
 
     <ol>
@@ -171,56 +167,37 @@
         <li>Access your Account Dashboard</li>
     </ol>
 
-
     <hr>
 
     <h2>Working with Links</h2>
 
     <h3>Internal Links</h3>
 
-    <a href="login.html">Go to Login</a>
-
+    <a href="#customerLogin">View Customer Login Information</a>
     <br><br>
-
     <a href="#transactions">View Transactions</a>
-
 
     <h3>External Link</h3>
 
-    <a href="https://www.youtube.com">
+    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
         Visit External Website
     </a>
 
-
     <hr>
-
-
 
     <h2>Working with Images</h2>
 
     <p>Bank Logo:</p>
 
-    <img src="abc_bank.jpg"
-         alt="ABC Bank Logo"
-         width="200"
-         height="100">
-
+    <img src="abc_bank.jpg" alt="ABC Bank Logo">
 
     <hr>
 
+    <h2 id="transactions">Transaction History</h2>
 
+    <p>View your recent transactions below:</p>
 
-
-    <h2 id="transactions">
-        Transaction History
-    </h2>
-
-    <div class="transaction-table">
-        <p>View your recent transactions below:</p>
-    </div>
-
-    <table border="1">
-
+    <table>
         <tr>
             <th>Date</th>
             <th>Description</th>
@@ -248,98 +225,62 @@
             <td>Debit</td>
             <td>₹3,000</td>
         </tr>
-
     </table>
+
     <br>
-
     <hr>
 
+    <h2 id="customerLogin">Customer Login Information</h2>
 
-
-
-    <h2 id="login">
-        Customer Login
-    </h2>
-
-    <form>
-
-        <label for="username">
-            Username:
-        </label>
-
-        <input type="text"
-               id="username"
-               name="username">
-
-        <br><br>
-
-
-        <label for="password">
-            Password:
-        </label>
-
-        <input type="password"
-               id="password"
-               name="password">
-
-        <br><br>
-
-
-        <button type="submit">
-            Login
-        </button>
-
-    </form>
-
+    <p>Login Status: <b style="color: green;">Logged In Successfully</b></p>
+    <p>Username: <b id="accountUsername"></b></p>
+    <p>Account Holder: ABC Bank Customer</p>
 
     <hr>
-
 
     <h2>Working with Audio</h2>
 
     <h3>Online Banking Security Instructions</h3>
 
     <audio controls>
-
-        <source src="security-message.mp3"
-                type="audio/mpeg">
-
+        <source src="security-message.mp3" type="audio/mpeg">
         Your browser does not support audio.
-
     </audio>
 
-
     <hr>
-
-
-    
 
     <h2>Working with Video</h2>
 
     <h3>Online Banking Tutorial</h3>
 
-    <video width="500"
-           controls>
-
-        <source src="TrialVide.mp4"
-                type="video/mp4">
-
+    <video width="500" controls>
+        <source src="TrialVide.mp4" type="video/mp4">
         Your browser does not support video.
-
     </video>
-
 
     <hr>
 
-
-
-
     <h2>Thank You</h2>
 
-    <p>
-        ABC Online Banking Application
-    </p>
+    <p>ABC Online Banking Application</p>
+
+    <button onclick="logout()">Logout</button>
+
+    <script>
+        // Display the logged-in username
+        const username = sessionStorage.getItem("bankUsername") || "Customer";
+
+        document.getElementById("customerName").textContent = username;
+        document.getElementById("accountUsername").textContent = username;
+
+        // Clear login session and return to login page
+        function logout() {
+            sessionStorage.removeItem("loggedIn");
+            sessionStorage.removeItem("bankUsername");
+
+            window.location.replace("login.html");
+        }
+    </script>
 
 </body>
-
 </html>

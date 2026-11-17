@@ -1,0 +1,15 @@
+{
+  "info": {
+    "name": "Student Course Registration API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{"key": "baseUrl", "value": "http://localhost:8080"}],
+  "item": [
+    {"name": "Create Student", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "url": "{{baseUrl}}/api/students", "body": {"mode": "raw", "raw": "{\n  \"name\": \"Aarav Sharma\",\n  \"email\": \"aarav@example.com\"\n}", "options": {"raw": {"language": "json"}}}}},
+    {"name": "Create Course", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "url": "{{baseUrl}}/api/courses", "body": {"mode": "raw", "raw": "{\n  \"code\": \"CS101\",\n  \"title\": \"Java Basics\",\n  \"capacity\": 1\n}", "options": {"raw": {"language": "json"}}}}},
+    {"name": "Register Student", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "url": "{{baseUrl}}/api/registrations", "body": {"mode": "raw", "raw": "{\n  \"studentId\": 1,\n  \"courseId\": 1\n}", "options": {"raw": {"language": "json"}}}}},
+    {"name": "List Students", "request": {"method": "GET", "header": [], "url": "{{baseUrl}}/api/students"}},
+    {"name": "List Courses", "request": {"method": "GET", "header": [], "url": "{{baseUrl}}/api/courses"}},
+    {"name": "List Registrations", "request": {"method": "GET", "header": [], "url": "{{baseUrl}}/api/registrations"}}
+  ]
+}

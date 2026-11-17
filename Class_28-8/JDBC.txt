@@ -1,0 +1,7 @@
+Import JDBC package
+Load JDVC driver
+Establish connection with database
+Create Statement Object
+Execute SQL query
+Process Results
+Close the connection

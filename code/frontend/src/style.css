@@ -1,0 +1,9 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #eef4ff; color: #17233c; }
+main { max-width: 980px; margin: 45px auto; padding: 32px; background: white; border-radius: 14px; box-shadow: 0 8px 30px #17233c1f; }
+h1 { margin-bottom: 4px; color: #174ea6; } .subtitle { color: #5d6b82; }
+form { display: flex; gap: 10px; flex-wrap: wrap; margin: 28px 0 18px; }
+input { flex: 1 1 160px; padding: 11px; border: 1px solid #c5cedd; border-radius: 6px; }
+button { padding: 10px 14px; border: 0; border-radius: 6px; background: #174ea6; color: white; cursor: pointer; }
+.secondary { background: #65748b; } .danger { background: #b3261e; } .message { color: #174ea6; }
+section { overflow-x: auto; } table { width: 100%; border-collapse: collapse; } th, td { padding: 13px 10px; border-bottom: 1px solid #e3e8f0; text-align: left; } th { color: #174ea6; }
